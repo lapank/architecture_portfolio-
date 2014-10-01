@@ -1,0 +1,174 @@
+.intro_animation{
+	background-color:#fff;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	z-index:20;
+}
+
+.intro_animation>embed{
+	position:fixed;
+	z-index:21;
+	left:24%;
+	width:60%;
+	top:1%;
+}
+
+.intro_animation>img{
+	position:fixed;
+	z-index:21;
+	width:50%;
+	left:27%;
+	top:70%;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+embed, .intro_animation>img{
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	animation-duration:2s;
+	}
+	
+@keyframes slide {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 488px;
+    top: 0;
+  }
+}
+
+embed, .intro_animation>img{
+  -webkit-animation: slide 2s ease-in-out .5s infinite alternate;
+  -moz-animation: slide 2s ease-in-out .5s infinite alternate;
+  animation: slide 2s ease-in-out .5s infinite alternate;
+}
+
+header {
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+h1{
+	text-transform: uppercase;
+	font-size:4rem;
+	letter-spacing: .3rem;
+}
+
+h2{
+	font-size:2rem;
+	letter-spacing: .2rem;
+	margin:0;
+}
+
+h1>span{
+	font-size:6rem;
+}
+
+main, footer{
+	max-width: 1300px;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+}
+
+.slider_window{
+	position:relative;
+	width:100%;
+	z-index: 1;
+}
+
+.slider_nav{
+	margin:0 auto;
+	padding-left:10px;
+	width:50%;
+}
+
+.slider_previous{
+	float:left;
+}
+
+.slider_nav_circle{
+	background-color:#888;
+	border-radius:30px;
+	height:20px;
+	width:20px;
+	float:left;
+}
+
+button{
+	outline:none;
+	background-color:none;
+	border:0;
+}
+
+.img_container, .gallery_img{
+	width:100%;
+}
+
+.lion_head{
+position: absolute;
+right: -16%;
+top: 0px;
+z-index: 10;
+width: 45%;
+}
+
+section>h1, h2 {
+	margin-left:20%;
+}
+
+main{
+	margin:0 auto;
+	width:90%;
+	padding-left:65px;
+}
+
+.clearfix{
+	overflow:hidden;
+}
+
+.column{
+	float:left;
+	width:50%;
+}
+nav{
+	margin-top:20px;
+	margin-right:65px;
+}
+
+nav>h2{
+	text-align:center;
+	text-transform:none;
+}
+
+
+footer{
+	background-color:#000;
+	color:#fff;
+	display:block;
+	height:20px;
+	text-align:center;
+}
+footer>a{
+	color:#fff;
+}
