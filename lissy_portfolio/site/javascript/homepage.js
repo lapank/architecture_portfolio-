@@ -5,11 +5,14 @@ $(document).ready(function(){
 			$(".intro").addClass('display-none');
 		});
 
+
 		$(".intro").addClass('intro_animation'); 
 
 		$(".slide-thing").addClass('intro_animation');
+
+		}, 5000);
 		
-	}, 5000);
+	
 	
 });
 
@@ -44,6 +47,6 @@ $(function() {
 	nextButton.click(nextItem);
 	prevButton.click(prevItem);
 	
-	//setInterval(nextItem,5000);
+	setInterval(nextItem,5000);
 });
 //end of painting page's carousel
